@@ -1,9 +1,12 @@
-﻿namespace FakeServer;
+﻿
+namespace FakeServer;
 
 internal class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Server server = new(8088);
+
+        await server.Run();
     }
 }
